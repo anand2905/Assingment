@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  country: MyString
+  state: MyString
+  city: MyString
+  is_active: 
+  default: MyString
+  'false': MyString
+
+two:
+  country: MyString
+  state: MyString
+  city: MyString
+  is_active: 
+  default: MyString
+  'false': MyString

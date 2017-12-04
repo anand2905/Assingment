@@ -1,0 +1,13 @@
+<%= nested_form_for @user do |f| %>
+<%= f.file_field :image,:accept=>'image/png,image/jpeg' %><br>
+<%= f.text_field :name, placeholder: "User Name" %>
+<%= f.fields_for :addresses do |li| %>
+ <%= li.text_field :country, placeholder: "Country" %><br>
+  <%= li.text_field  :state , placeholder: "State"  %><br>
+  <%= li.text_field  :city , placeholder: "City"  %><br>
+  Current Address<%=li.check_box :is_active%><br>
+  <%= li.link_to_remove "Remove item" %><br>
+<% end %>
+<%= f.link_to_add "Add Addresses", :addresses %>
+ <%= f.submit "Save" %>
+<%end%>

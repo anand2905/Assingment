@@ -1,0 +1,60 @@
+<%=link_to "Create User",new_user_path%>
+
+
+<h3>User with active Address</h3>
+<table>
+	<th>
+		<td>Image</td>
+		<td>Name</td>
+		<td>Actions</td>
+	</th>
+	<%@users_with_active_add.each do |u|%>
+	<tr>
+		<td><%=u.image%></td>
+		<td><%=u.name%></td>
+		<td>
+			<%=link_to "show",user_path(u)%>
+			<%=link_to "delete",user_path(u),method: :delete%>
+			<%=link_to "Edit",edit_user_path(u)%>
+		</td>
+	</tr>
+	<%end%>
+</table>
+<h3>User with non active Address</h3>
+<table>
+	<th>
+		<td>Image</td>
+		<td>Name</td>
+		<td>Actions</td>
+	</th>
+	<%@users_with_non_active_add.each do |u|%>
+	<tr>
+		<td><%=u.image%></td>
+		<td><%=u.name%></td>
+		<td>
+			<%=link_to "show",user_path(u)%>
+			<%=link_to "delete",user_path(u),method: :delete%>
+			<%=link_to "Edit",edit_user_path(u)%>
+		</td>
+	</tr>
+	<%end%>
+</table>
+<h3>User without Address</h3>
+<table>
+	<th>
+		<td>Image</td>
+		<td>Name</td>
+		<td>Actions</td>
+	</th>
+	<%@user_without_address.each do |u|%>
+	<tr>
+		<td><%=u.image%></td>
+		<td><%=u.name%></td>
+		<td>
+			<%=link_to "show",user_path(u)%>
+			<%=link_to "delete",user_path(u),method: :delete%>
+			<%=link_to "Edit",edit_user_path(u)%>
+		</td>
+	</tr>
+	<%end%>
+</table>

@@ -1,0 +1,9 @@
+Name:<%=@user.name%><br>
+Image:
+ <%= image_tag @user.image.thumb.url %>
+<%@addresses.each do |a|%>
+Country:<%=a.country%><br>
+State:<%=a.state%><br>
+City:<%=a.city%><br>
+<%end%>
+<%=link_to "Back",:back%>
